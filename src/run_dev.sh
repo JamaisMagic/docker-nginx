@@ -1,3 +1,5 @@
+#!/usr/bin/bash
+
 if [ "$1" == "build" ]; then
     docker-compose -f ./docker-compose.yml build
 elif [ "$1" == "up" ]; then

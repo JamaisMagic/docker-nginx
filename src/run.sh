@@ -1,5 +1,7 @@
+#!/usr/bin/bash
+
 if [ "$1" == "build" ]; then
-    docker-compose -f ./docker-compose.yml -f ./docker-compose.override.yml build
+    git pull && docker-compose -f ./docker-compose.yml -f ./docker-compose.override.yml build
 elif [ "$1" == "up" ]; then
     docker-compose -f ./docker-compose.yml -f ./docker-compose.override.yml up -d
 elif [ "$1" == "recreate" ]; then

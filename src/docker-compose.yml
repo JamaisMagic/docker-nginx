@@ -1,0 +1,23 @@
+version: "3.7"
+
+services:
+  nginx:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+      target: development
+    image: www_picoluna_com_nginx
+    ports:
+      - "80:80"
+    container_name: container_nginx
+    networks:
+      - webnet
+    restart: always
+    volumes:
+      - "/data/app/www.picoluna.com/app/f2e:/data/app/www.picoluna.com/app/f2e"
+      - "/data/log/nginx:/data/log/nginx"
+networks:
+  webnet:
+#    external: true
+    name: webnet
+    driver: bridge

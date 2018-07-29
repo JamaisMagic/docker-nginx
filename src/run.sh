@@ -1,7 +1,8 @@
 #!/usr/bin/bash
 
+git pull origin master:master && \
 if [ "$1" == "build" ]; then
-    git pull && docker-compose -f ./docker-compose.yml -f ./docker-compose.override.yml build
+    docker-compose -f ./docker-compose.yml -f ./docker-compose.override.yml build
 elif [ "$1" == "up" ]; then
     docker-compose -f ./docker-compose.yml -f ./docker-compose.override.yml up -d
 elif [ "$1" == "recreate" ]; then

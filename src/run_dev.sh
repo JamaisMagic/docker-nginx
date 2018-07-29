@@ -4,9 +4,9 @@
 if [ "$1" == "build" ]; then
     docker-compose -f ./docker-compose.yml build
 elif [ "$1" == "up" ]; then
-    docker-compose -f ./docker-compose.yml up -d
+    docker-compose -f ./docker-compose.yml up -d --build
 elif [ "$1" == "recreate" ]; then
-    docker-compose -f ./docker-compose.yml up -d --force-recreate
+    docker-compose -f ./docker-compose.yml up -d --build --force-recreate
 elif [ "$1" == "restart" ]; then
     docker-compose -f ./docker-compose.yml restart
 elif [ "$1" == "stop" ]; then

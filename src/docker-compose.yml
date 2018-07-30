@@ -9,6 +9,7 @@ services:
     image: www_picoluna_com_nginx
     ports:
       - "80:80"
+      - "443:443"
     container_name: container_nginx
     networks:
       - webnet

@@ -1,5 +1,8 @@
 #!/usr/bin/bash
 
+
+cp /etc/letsencrypt/live/picoluna.com/fullchain.pem ./ && \
+cp /etc/letsencrypt/live/picoluna.com/privkey.pem ./
 git pull origin master:master && \
 if [ "$1" == "build" ]; then
     docker-compose -f ./docker-compose.yml -f ./docker-compose.override.yml build

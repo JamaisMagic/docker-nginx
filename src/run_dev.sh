@@ -18,3 +18,5 @@ elif [ "$1" == "reload" ]; then
 else
     echo "Unexpected parameter: $1"
 fi
+
+docker rmi $(docker images -f "dangling=true" -q)

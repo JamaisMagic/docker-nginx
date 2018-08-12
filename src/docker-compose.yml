@@ -7,6 +7,9 @@ services:
       dockerfile: ./Dockerfile
       target: development
     image: www_picoluna_com_nginx
+    expose:
+      - "80"
+      - "443"
     ports:
       - "80:80"
       - "443:443"

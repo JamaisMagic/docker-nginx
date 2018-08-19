@@ -19,6 +19,7 @@ services:
     restart: always
     volumes:
       - "/data/app/www.picoluna.com/app/f2e:/data/app/www.picoluna.com/app/f2e"
+      - "/data/app/index_resource/dist:/data/app/index_resource/dist"
       - "/data/log/nginx:/data/log/nginx"
 networks:
   webnet:

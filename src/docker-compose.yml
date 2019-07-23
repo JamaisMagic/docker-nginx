@@ -20,6 +20,7 @@ services:
     volumes:
       - "/data/app/www.picoluna.com/app/f2e:/data/app/www.picoluna.com/app/f2e"
       - "/data/app/www.namie.cc/app/f2e:/data/app/www.namie.cc/app/f2e"
+      - "/data/app/asset-holders-COS-2E4/src/public:/data/app/asset-holders-COS-2E4/src/public"
       - "/data/app/index_resource/dist:/data/app/index_resource/dist"
       - "/data/log/nginx:/data/log/nginx"
 networks:

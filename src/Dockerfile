@@ -18,4 +18,5 @@ COPY ./nginx.conf /etc/nginx/
 COPY ./nginx.conf /usr/local/openresty/nginx/conf/
 COPY ./conf.d/www.picoluna.com.nginx.conf /etc/nginx/conf.d/
 COPY ./conf.d/www.namie.cc.nginx.conf /etc/nginx/conf.d/
+COPY ./conf.d/explorer.picoluna.com.nginx.conf /etc/nginx/conf.d/
 COPY ./conf.d/index.resource.picoluna.com.nginx.conf /etc/nginx/conf.d/
